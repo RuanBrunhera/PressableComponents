@@ -19,6 +19,7 @@ export default function HomeScreen({ navigation }) {
         </Pressable>
         <Pressable style={styles.botao}>
           <Text style={styles.textoBotao}>Galáxias</Text>
+          onPress={() => navigation.replace('Galaxias')}
         </Pressable>
         <Pressable style={styles.botao}>
           <Text style={styles.textoBotao}>Buraco negro</Text>

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Pressable, Image, ScrollView } from 'react-native';
 
-export default function PlanetScreen({ navigation }) {
+export default function GalaxyScreen({ navigation }) {
   return (
       <ScrollView>
     <View style={styles.container}>
