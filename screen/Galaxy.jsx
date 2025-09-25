@@ -1,4 +1,7 @@
-import { StyleSheet, Text, View, Pressable, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Image } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import Entypo from '@expo/vector-icons/Entypo';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function GalaxyScreen({navigation}) {
   return (
@@ -13,16 +16,19 @@ export default function GalaxyScreen({navigation}) {
         <Pressable style={styles.botao}
                   onPress={() => navigation.replace('Home')}
                 >
-                  <Text style={styles.textoBotao}>Home</Text>
+                  <Entypo name="home" size={24} color="black" />
+                                    <Text style={styles.textoBotao}>Home</Text>
         </Pressable>
         <Pressable style={styles.botao}
         onPress={() => navigation.replace('Planetas')}
         >
+          <Ionicons name="planet" size={24} color="black" />
           <Text style={styles.textoBotao}>Planetas</Text>
         </Pressable>
         <Pressable style={styles.botao}
           onPress={() => navigation.replace('BuracoNegro')}
         >
+          <MaterialCommunityIcons name="atom-variant" size={24} color="black" />
           <Text style={styles.textoBotao}>Buraco negro</Text>
         </Pressable>
       </View>
@@ -69,7 +75,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     margin: 5,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   textoBotao: {
     color: '#494949ff',

@@ -1,4 +1,6 @@
 import { StyleSheet, Text, View, Pressable, Image } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function HomeScreen({ navigation }) {
   return (
@@ -15,16 +17,19 @@ export default function HomeScreen({ navigation }) {
         <Pressable style={styles.botao}
           onPress={() => navigation.replace('Planetas')}
         >
+          <Ionicons name="planet" size={24} color="black" />
           <Text style={styles.textoBotao}>Planetas</Text>
         </Pressable>
         <Pressable style={styles.botao}
           onPress={() => navigation.replace('Galaxias')}
           >
+          <MaterialCommunityIcons name="atom" size={24} color="black" />
           <Text style={styles.textoBotao}>Galáxias</Text>
         </Pressable>
         <Pressable style={styles.botao}
           onPress={() => navigation.replace('BuracoNegro')}
         >
+          <MaterialCommunityIcons name="atom-variant" size={24} color="black" />
           <Text style={styles.textoBotao}>Buraco negro</Text>
         </Pressable>
       </View>
@@ -69,7 +74,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     margin: 5,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection:  'row'
   },
   textoBotao: {
     color: '#494949ff',
