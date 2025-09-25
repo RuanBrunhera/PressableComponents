@@ -6,7 +6,7 @@ export default function HomeScreen({ navigation }) {
       <View style={styles.box}>
       
       {/* <Image source={require('./assets/alo.jpg')} style={styles.imageGalaxy} /> */}
-      <Image source={require('../assets/galaxia.jpg')} style={styles.imageGalaxy} />
+      <Image source={require('../assets/homeImage.jpg')} style={styles.imageGalaxy} />
 
       <Text style={styles.H1}>Conheça um pouco sobre o universo</Text>
       <Text style={styles.H2}>Toque nos botões abaixo e conheça um pouco mais sobre o que existe no céu</Text>
@@ -17,11 +17,14 @@ export default function HomeScreen({ navigation }) {
         >
           <Text style={styles.textoBotao}>Planetas</Text>
         </Pressable>
-        <Pressable style={styles.botao}>
-          <Text style={styles.textoBotao}>Galáxias</Text>
+        <Pressable style={styles.botao}
           onPress={() => navigation.replace('Galaxias')}
+          >
+          <Text style={styles.textoBotao}>Galáxias</Text>
         </Pressable>
-        <Pressable style={styles.botao}>
+        <Pressable style={styles.botao}
+          onPress={() => navigation.replace('BuracoNegro')}
+        >
           <Text style={styles.textoBotao}>Buraco negro</Text>
         </Pressable>
       </View>
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
   },
   imageGalaxy:{
     width: 400, 
-    height: 250, 
+    height: 400, 
     marginBottom: 20,
     borderRadius: 20
   }

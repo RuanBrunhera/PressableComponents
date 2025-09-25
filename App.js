@@ -1,7 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./screen/Home.jsx";
 import PlanetScreen from "./screen/PlanetScreen.jsx";
-import PlanetScreen from "./screen/Galaxy.jsx";
+import GalaxyScreen from "./screen/Galaxy.jsx";
+import BlackHoleScreen from "./screen/BlackHole.jsx";
 import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createStackNavigator();
@@ -14,17 +15,24 @@ export default function App() {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen
           name="Planetas"
           component={PlanetScreen}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen 
-        name="Galáxias" 
+        name="Galaxias" 
         component = { GalaxyScreen } 
         options={{ headerShown: false }}
         />
-        {/* <Stack.Screen name="Buraco Negro" component = { TelaBuracoNegro } /> */} 
+
+        <Stack.Screen 
+        name="BuracoNegro" 
+        component = { BlackHoleScreen} 
+        options={{ headerShown: false }}
+        />        
       </Stack.Navigator>
     </NavigationContainer>
   )

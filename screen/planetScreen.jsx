@@ -22,10 +22,14 @@ export default function PlanetScreen({ navigation }) {
         >
           <Text style={styles.textoBotao}>Home</Text>
         </Pressable>
-        <Pressable style={styles.botao}>
+        <Pressable style={styles.botao}
+        onPress={() => navigation.replace('Galaxias')}
+        >
           <Text style={styles.textoBotao}>Galáxias</Text>
         </Pressable>
-        <Pressable style={styles.botao}>
+        <Pressable style={styles.botao}
+          onPress={() => navigation.replace('BuracoNegro')}
+          >
           <Text style={styles.textoBotao}>Buraco negro</Text>
         </Pressable>
       </View>
